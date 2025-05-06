@@ -13,16 +13,39 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.reactpos"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "91555125-4185-4236-a561-c1eb1b593670"
+      }
+    },
+    "owner": "poonix",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow POS to access your photos to upload profile pictures",
+          "cameraPermission": "Allow POS to access your camera to take profile pictures"
+        }
+      ]
+    ]
   }
 }
